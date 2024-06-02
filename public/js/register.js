@@ -5,7 +5,7 @@ export const register=async (data)=>{
     const res=await axios({
         method:'post',
         data,
-        url:"http://localhost:4000/api/v1/users/signup"
+        url:"/api/v1/users/signup"
     })
     if(res.data.status=='success'){
         showAlert('success','خوش آمدید!')
