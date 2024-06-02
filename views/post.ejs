@@ -1,0 +1,48 @@
+<html>
+    <%- include('head') %>
+    <body>
+        <%- include('header') %>
+        <main>
+            <div class="post-container">
+                <img src="/images/posts/<%= post.imageCover %>" alt="تصویر پست">
+                <h2 class="post-title"><%= post.title %></h2>
+                <div class="post-meta">
+                    <span><%= post.createdAt.toLocaleString('en-us',{month:'long',year:'numeric'}) %></span>
+                  <span><%= post.writer.name %></span>
+                </div>
+                <div class="post-content">
+                    <p><%= post.body %></p>
+                </div>
+                <div class="author-info">
+                    <img src="/images/users/<%= post.writer.photo %>" alt="عکس نویسنده">
+                    <div>
+                        <h4><%= post.writer.name %></h4>
+                        <p>نویسنده</p>
+                    </div>
+                </div>
+                <div class="comments">
+                    <h3>نظرات</h3>
+                    <% if (post.comments.length==0) { %>
+                     <p>نطری برای این پست وجود ندارد</p>
+                    <% } %>
+                    <% if (!post.comments.length==0) { %>
+                        <% post.comments.forEach(comment => { %>
+                            <div class="comment">
+                                <img src="/images/users/<%= comment.user.photo %>" alt="<%= comment.user.name %>">
+                                <div class="comment-content">
+                                    <div class="comment-meta"><%= comment.createdAt.toLocaleString('en-us',{month:'long',year:'numeric'}) %></div>
+                                    <div class="comment-text"><%= comment.body %></div>
+                                </div>
+                            </div>
+                        <% }) %>
+                        
+                    <% } %>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 بلاگ من. تمامی حقوق محفوظ است.</p>
+        </footer>
+    </body>
+    <%- include('scripts') %>
+</html>

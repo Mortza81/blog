@@ -1,0 +1,676 @@
+/* استایل‌های کلی */
+body {
+    font-family: 'Vazir', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background:#f4f4f4;
+    direction: rtl;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Sahel', Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sahel', Arial, sans-serif;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: #555;
+    transition: background 0.3s, transform 0.3s;
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    background: #777;
+    transform: translateY(-2px);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    font-family: 'Sahel', Arial, sans-serif;
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل‌های صفحه اصلی */
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    font-family: 'Vazir', Arial, sans-serif;
+}
+
+.post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* استایل‌های صفحه نمایش پست */
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.post-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.post-content {
+    margin-bottom: 40px;
+    line-height: 1.8;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.post-content .ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.author-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.comments {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.comment img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.comment-content {
+    max-width: 700px;
+}
+
+.comment-content .ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+.comment-meta {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.comment-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* استایل‌های فرم‌ها */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius:5px;
+    font-size: 1em;
+    font-family: 'Vazir', Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Sahel', Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-form {
+    margin-bottom: 30px;
+}
+
+.dashboard-form-group {
+    margin-bottom: 15px;
+}
+
+.dashboard-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: 'Sahel', Arial, sans-serif;
+}
+
+.dashboard-form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Vazir', Arial, sans-serif;
+}
+
+.dashboard-form-group button {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Sahel', Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dashboard-form-group button:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+.dashboard-form-group button:active {
+    transform: translateY(0);
+}
+
+/* استایل‌های صفحه خطا */
+.error-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.error-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.error-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.error-container .btn:hover {
+    background: #555;
+}
+
+/* استایل‌های هشدار (Alert) */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert .close {
+    float: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: none;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.alert .close:hover {
+    opacity: 0.75;
+}
+
+/* Media Queries برای اطمینان از نمایش مناسب */
+@media (max-width: 1024px) {
+    main {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .post {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .post {
+        width: calc(100% - 20px);
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* استایل‌های نوار کناری */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Sahel', Arial, sans-serif;
+    position: fixed; /* اضافه کردن موقعیت ثابت */
+    top: 0; /* قرار دادن نوار کناری در بالای صفحه */
+    left: 0; /* قرار دادن نوار کناری در سمت چپ صفحه */
+    bottom: 0; /* پر کردن ارتفاع کامل نوار کناری */
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ddd;
+}
+
+.active {
+    font-weight: bold;
+}
+
+/* استایل‌های دکمه غیر فعال کردن کاربر */
+.deactivate-link {
+    color: #ff6347;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.deactivate-link:hover {
+    color: #ff473d;
+}
+/* استایل‌های کاربران فعال و غیر فعال */
+.active-users,
+.inactive-users {
+    margin-top: 30px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+   
+    align-items: center;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.deactivate-link {
+    color: #ff6347;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.deactivate-link:hover {
+    color: #ff473d;
+}
+/* استایل‌های دکمه فعال/غیرفعال کردن */
+.deactivate-button,
+.activate-button {
+    padding: 8px 15px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.deactivate-button:hover,
+.activate-button:hover {
+    background-color: #ff473d;
+}
+
+/* استایل‌های دکمه‌ها در کنار نام کاربر */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.deactivate-button,
+.activate-button {
+    margin-left: 10px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Sahel', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ddd;
+}
+main {
+    padding: 20px;
+    flex: 1;
+    margin-right: 300px; /* فضایی برای نوار کناری */
+    margin-left: 300px;
+}
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    font-family: 'Vazir', Arial, sans-serif;
+}
+
+.post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex: 1 0 30%; /* تغییر در اندازه پست‌ها */
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+}

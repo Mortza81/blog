@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa">
+<%- include('head') %>
+<body>
+<%- include('header') %>
+<main>
+    <div class="form-container">
+        <h2>ورود</h2>
+        <form class="form--login">
+            <div class="form-group">
+                <label for="email">ایمیل:</label>
+                <input type="email" placeholder="you@example.com" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">رمز عبور:</label>
+                <input type="password" id="password" name="password" required placeholder="••••••••">
+            </div>
+            <button>ورود</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 بلاگ من. تمامی حقوق محفوظ است.</p>
+</footer>
+</body>
+<%- include('scripts') %>
+
+</html>

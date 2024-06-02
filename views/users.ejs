@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa">
+<%- include('head') %>
+<body>
+   <%- include('header') %>
+    <%- include('sidebar') %>
+   <main>
+    <section class="active-users">
+        <h2>کاربران فعال</h2>
+        <%  users.forEach(user => { %>
+           <% if (user.isActive==true) { %>
+            <div class="user">
+                <div class="user-info">
+                    <img src="/images/users/<%= user.photo %>" alt="<%= user.name %>">
+                    <p><%= user.name %></p>
+                </div>
+                <button class="deactivate-button" data-userid="<%= user.id %>">حذف</button>
+            </div>
+           <% } %>
+        <% }) %>
+        
+        <!-- سایر کاربران فعال -->
+    </section>
+    
+    <section class="inactive-users">
+        <h2>کاربران غیر فعال</h2>
+        <% users.forEach(user => { %>
+        <% if (user.isActive==false) { %>
+            <div class="user">
+                <div class="user-info">
+                    <img src="/images/users/<%= user.photo %>" alt="<%= user.name %>">
+                    <p><%= user.name %></p>
+                </div>
+                <button class="activate-button">فعال کردن</button>
+            </div>
+        <% } %>
+
+            
+        <% }) %>
+     
+        <!-- سایر کاربران غیر فعال -->
+    </section>
+   </main>
+    
+    <footer>
+        <p>&copy; 2024 داشبورد من. تمامی حقوق محفوظ است.</p>
+    </footer>
+</body>
+<%- include('scripts') %>
+</html>

@@ -1,0 +1,22 @@
+<header>
+    <h1>بلاگ من</h1>
+    <nav>
+        <ul>
+            <li><a href="/">خانه</a></li>
+            <% if (locals.user) { %>
+                
+                <li class="user-info">
+                <a href="/dashboard">
+                    <img src="/images/users/<%= user.photo %>" alt="username">
+                    <span><%= user.name %></span>
+                </a>
+                </li>
+                <li><a href="" class="logout-btn">خروج</a></li>
+            <% } %>
+            <% if (!locals.user) { %>
+                <li><a href="/login">ورود</a></li>
+                <li><a href="/register">ثبت نام</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

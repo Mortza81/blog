@@ -1,0 +1,11 @@
+const express=require('express')
+const authController=require('../controllers/authController')
+const viewController=require('../controllers/viewController')
+const router=express.Router()
+router.get('/',authController.isLoggedIn,viewController.showAllPosts)
+router.get('/posts/:slug',authController.protect,viewController.showPost)
+router.get('/login',viewController.login)
+router.get('/dashboard',authController.protect,viewController.getAccount)
+router.get('/register',viewController.register)
+router.get('/dashboard/users',authController.protect,authController.restrict('admin'),viewController.showAllUsers)
+module.exports=router

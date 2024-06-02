@@ -1,0 +1,51 @@
+<html>
+    <%- include('head') %>
+    <body>
+        <%- include('header') %>
+        <%- include('sidebar') %>
+        <main>
+            <div class="dashboard-container">
+                <h2>داشبورد</h2>
+                <form class="dashboard-form form--updateData" enctype="multipart/form-data" method="POST" action="/update-data">
+                    <div class="dashboard-form-group">
+                        <label for="profile-photo">عکس پروفایل:</label>
+                        <img src="images/users/<%= user.photo %>" alt="Profile Photo" class="profile-photo">
+                        <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
+                    </div>
+                    <div class="dashboard-form-group">
+                        <label for="name">نام:</label>
+                        <input type="text" id="name" name="name" required value="<%= user.name %>">
+                    </div>
+                    <div class="dashboard-form-group">
+                        <label for="email">ایمیل:</label>
+                        <input type="email" id="email" name="email" required value="<%= user.email %>">
+                    </div>
+                    <div class="dashboard-form-group">
+                        <button type="submit">به‌روزرسانی اطلاعات</button>
+                    </div>
+                </form>
+                <form class="dashboard-form form--updatePassword">
+                    <div class="dashboard-form-group">
+                        <label for="current-password">رمز عبور فعلی:</label>
+                        <input type="password" id="password-current" required placeholder="••••••••">
+                    </div>
+                    <div class="dashboard-form-group">
+                        <label for="new-password">رمز عبور جدید:</label>
+                        <input type="password" id="password" required placeholder="••••••••">
+                    </div>
+                    <div class="dashboard-form-group">
+                        <label for="new-password">رمز عبور جدید:</label>
+                        <input type="password" id="password-confirm" required placeholder="••••••••">
+                    </div>
+                    <div class="dashboard-form-group">
+                        <button type="submit">به‌روزرسانی رمز عبور</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 بلاگ من. تمامی حقوق محفوظ است.</p>
+        </footer>
+    </body>
+    <%- include('scripts') %>
+</html>
